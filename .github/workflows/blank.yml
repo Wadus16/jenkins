@@ -14,13 +14,12 @@ on:
   workflow_dispatch:
 
 jobs:
-  # This workflow contains a single job called "build"
-  build:
-    # The type of runner that the job will run on
-  runs-on: ubuntu-latest
-  container:
-    image: docker://docker.pkg.github.com/wadus16/jenkins/test:1.0
-  steps:
-      - uses: actions/checkout@v2
-      - name: Start database
-        run: echo "Hello"
+  rspec-job:
+    # This workflow contains a single job called "build"
+    runs-on: ubuntu-latest
+    container:
+      image: docker://docker.pkg.github.com/wadus16/jenkins/test:1.0
+    steps:
+        - uses: actions/checkout@v2
+        - name: Start database
+          run: echo "Hello"
