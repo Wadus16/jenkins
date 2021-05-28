@@ -17,6 +17,8 @@ jobs:
   rspec-job:
     # This workflow contains a single job called "build"
     runs-on: ubuntu-latest
+    env:
+      GITHUB_TOKEN: ${{ secrets.test_packages }}
     container:
       image: docker://docker.pkg.github.com/wadus16/jenkins/test:1.0
     steps:
