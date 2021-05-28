@@ -21,6 +21,9 @@ jobs:
       GITHUB_TOKEN: ${{ secrets.test_packages }}
     container:
       image: docker.pkg.github.com/wadus16/jenkins/test:1.0
+      credentials:
+        username: wadus16
+        password: secrets.test_packages
       
     steps:
         - uses: actions/checkout@v2
