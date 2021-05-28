@@ -21,4 +21,4 @@ jobs:
 
     steps:
       - name: My first step
-        uses: docker://ghcr.io/wadus16/test
+        uses: docker://ghcr.io/wadus16/test:1.0
