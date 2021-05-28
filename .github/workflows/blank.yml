@@ -23,7 +23,7 @@ jobs:
       image: docker.pkg.github.com/wadus16/jenkins/test:1.0
       credentials:
         username: wadus16
-        password: ${secrets.test_packages}
+        password: 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
       
     steps:
         - uses: actions/checkout@v2
