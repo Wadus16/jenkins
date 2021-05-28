@@ -17,13 +17,9 @@ jobs:
   rspec-job:
     # This workflow contains a single job called "build"
     runs-on: ubuntu-latest
-    env:
-      GITHUB_TOKEN: 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
+    
     container:
       image: docker.pkg.github.com/wadus16/jenkins/test:1.0
-      credentials:
-        username: wadus16
-        password: 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
       
     steps:
         - uses: actions/checkout@v2
