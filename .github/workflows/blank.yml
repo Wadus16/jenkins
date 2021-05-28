@@ -18,7 +18,9 @@ jobs:
   build:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
-
+  container:
+      image: docker://ghcr.io/wadus16/jenkins/test:1.0
     steps:
-      - name: My first step
-        uses: docker://ghcr.io/wadus16/jenkins/test:1.0
+      - uses: actions/checkout@v2
+      - name: Start database
+        run: echo "Hello"
