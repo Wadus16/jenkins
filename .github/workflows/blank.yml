@@ -21,6 +21,10 @@ jobs:
       GITHUB_TOKEN: ${{ secrets.test_packages }}
     container:
       image: docker://docker.pkg.github.com/wadus16/jenkins/test:1.0
+      credentials:
+        username: mona
+        password: ${{ secrets.test_packages }}
+      
     steps:
         - uses: actions/checkout@v2
         - name: Start database
