@@ -20,6 +20,8 @@ jobs:
     
     container:
       image: docker.pkg.github.com/wadus16/jenkins/test:1.0
+        username:wadus16
+        password:${{secrets.GITHUB_TOKEN}}
       
     steps:
         - uses: actions/checkout@v2
