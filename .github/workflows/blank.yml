@@ -22,7 +22,7 @@ jobs:
     container:
       image: docker://docker.pkg.github.com/wadus16/jenkins/test:1.0
       credentials:
-        username: mona
+        username: wadus16
         password: ${{ secrets.test_packages }}
       
     steps:
