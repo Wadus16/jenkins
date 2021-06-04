@@ -19,7 +19,7 @@ jobs:
     runs-on: ubuntu-latest
       
     steps:
-
+        - run: echo $CI
         - run: echo $GITHUB_WORKFLOW
         - run: echo $GITHUB_RUN_ID
         - run: echo $GITHUB_RUN_NUMBER
