@@ -25,6 +25,8 @@ jobs:
         password: ${{ secrets.GITHUB_TOKEN }}
       
     steps:
+        - run: docker images
+        
         - uses: actions/checkout@v2
         - name: Start database
           run: echo "Hello"
